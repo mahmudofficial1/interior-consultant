@@ -1,0 +1,197 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+body{
+    background: #181719;
+    color: white;
+}
+nav{
+    height: auto;
+    background: #181719;
+    padding: 3% 10%;
+    align-items: center;
+}
+nav b{
+    position: relative;
+    font-size: 22px;
+    line-height: 50px;
+    text-transform: uppercase;
+    font-family: 'Crimson Pro', serif;
+    border: 1px solid;
+    padding: 5px;
+}
+nav ul{
+    float: right;
+    list-style: none;
+    position: relative;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 50px;
+}
+nav ul li a{
+    display: inline-block;
+    position: relative;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    margin: 0 1.3rem;
+    font-family: 'Montserrat', sans-serif;
+}
+.home{
+    border-bottom: 1px solid white;
+}
+.hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5% 9%;
+    gap: 1.5rem;
+}
+#arrow{
+    color: white;
+}
+h1{
+    font-family: 'Lora', serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+.hero-info p{
+    font-family: 'Montserrat', sans-serif;
+    inline-size: 80%;
+    overflow-wrap: break-word;
+    margin-bottom: 2rem;
+}
+.design{
+    width: 28rem;
+}
+button{
+    color: white;
+    background: none;
+    border: none;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    transition: .5s;
+}
+button ion-icon{
+    margin-left: 5px;
+}
+button:hover{
+    transition: .5s;
+    border: 1px solid;
+    cursor: pointer;
+    padding: 0.5rem;
+    box-shadow:  0 0 10px 0 white inset;
+}
+.auth-card{
+    position: relative;
+    background: #181719;
+    width: 290px;
+    height: auto;
+    padding: 2%;
+    bottom: 50px;
+    left: 120px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.auth-card p{
+    margin-top: 2%;
+}
+.auth-card small{
+    font-weight: 150;
+}
+.auth-card p,small{
+    font-family: 'Montserrat', sans-serif;
+}
+.auth-card span{
+    font-family: 'Lora', serif;
+    font-size: 24px;
+    width: 287px;
+    margin-left: 2%;
+}
+.auth-card img{
+    border-radius: 50px;
+    float: left;
+    text-align: right;
+    margin: 0 2%;
+    align-items: center;
+    line-height: 50px;
+}
+footer{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    padding: 5%;
+}
+footer a{
+    color: white;
+}
+label #ham,
+label #ex{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 50px;
+    cursor: pointer;
+    display: none;
+}
+#res-menu{
+    display: none;
+}
+@media (max-width:860px){
+    label #ham{
+        display: inline-flex;
+    }
+    nav ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #181719;
+        padding-top: 52px;
+        left: -100%;
+        text-align: center;
+        transition: .5s;
+        z-index: 1;
+    }
+    nav ul li{
+        margin: 0px 0;
+        line-height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    nav ul li a{
+        font-size: 20px;
+        display: block;
+        padding: 15px;
+    }
+    #res-menu:checked ~ ul{
+        left: 0;
+    }
+    #res-menu:checked ~ label #ham{
+        display: none;
+        transition: .4s;
+    }
+    #res-menu:checked ~ label #ex{
+        display: block;
+    }
+    .hero{
+        flex-direction: column;
+    }
+    .design{
+        width: 20rem;
+    }
+    .hero-info{
+        margin-bottom: 10%;
+    }
+    .auth-card{
+        left: 60px;
+    }
+}
